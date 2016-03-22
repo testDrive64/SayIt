@@ -1,3 +1,14 @@
-Meteor.subscribe('statements');
+//Meteor.subscribe('statements');
 
-console.log(Meteor.settings.public.ga.account);
+Template.Statements.onCreated(function() {
+	var self = this;
+	self.autorun(function() {
+		self.subscribe('statements');
+	});
+});
+
+Template.Recipes.helpers({
+	statements: ()=> {
+		return Statements.find({})
+	}
+});

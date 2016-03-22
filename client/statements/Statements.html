@@ -1,3 +1,13 @@
 <template name="Statements">
   {{> NewStatement}}
+
+  <section class="statements">
+  	{{#if Template.subscriptionsReady}}
+  		{{#each statements}}
+  			{{> Statement}}
+  		{{/each}}
+  	{{else}}
+  		<p>Loading</p>
+  	{{/if}}
+  </section>
 </template>
