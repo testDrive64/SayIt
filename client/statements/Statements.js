@@ -8,7 +8,7 @@ Template.Statements.onCreated(function() {
 });
 
 Template.Statements.helpers({
-	statements: () => {
+	statements() {
 		return Statements.find({})
 	}
 });

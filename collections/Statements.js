@@ -1,6 +1,5 @@
 Statements = new Mongo.Collection('statements');
 
-
 Statements.allow({
   insert: function(userId, doc) {
     return !!userId; // who is allow to writing a statements

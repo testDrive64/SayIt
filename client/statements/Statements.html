@@ -2,9 +2,9 @@
   {{> NewStatement}}
 
   <section class="statements">
-  	{{#if Template.subscriptionsReady}}
+    {{#if Template.subscriptionsReady}}
   		{{#each statements}}
-  			{{> Statement}}
+        {{> Statement}}
   		{{/each}}
   	{{else}}
   		<p>Loading</p>
