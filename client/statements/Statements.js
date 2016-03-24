@@ -1,4 +1,4 @@
-Meteor.subscribe('statements');
+//Meteor.subscribe('statements');
 
 Template.Statements.onCreated(function() {
 	var self = this;
@@ -7,8 +7,8 @@ Template.Statements.onCreated(function() {
 	});
 });
 
-Template.Recipes.helpers({
-	statements: ()=> {
+Template.Statements.helpers({
+	statements: () => {
 		return Statements.find({})
 	}
 });

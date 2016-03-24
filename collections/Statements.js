@@ -9,7 +9,7 @@ Statements.allow({
   }
 });
 
-Story = new SimpleSchema({
+Chapter = new SimpleSchema({
   header: {
     type: String
   },
@@ -29,10 +29,10 @@ StatementSchema = new SimpleSchema({
     label: "Description"
   },
 
-  story: {
-    type: [Story]
+  chapter: {
+    type: [Chapter]
   },
-
+/*
   readCounter: {
     type: Number,
     autoValue: function() {
@@ -42,7 +42,7 @@ StatementSchema = new SimpleSchema({
       type:"hidden"
     }
   },
-
+*/
   author:{
     type: String,
     label: "Author",
