@@ -58,7 +58,6 @@ StatementSchema = new SimpleSchema({
     autoValue: function() {
       return this.userId
     },
-    
     autoform: {
       type: "hidden"
     }

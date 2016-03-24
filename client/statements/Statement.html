@@ -1,5 +1,5 @@
 <template name="Statement">
-	<article class="statement">
+	<article class="statement {{#if favorites}}in-favorites{{/if}}">
 		<h3>{{name}}</h3>
 		<p>{{desc}}</p>
 		<p>
