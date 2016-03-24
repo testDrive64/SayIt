@@ -90,7 +90,7 @@ Meteor.methods({
   clickCounter: function(id, currentState) {
     Statements.update(id, {
       $set: {
-        readCounter.value += 1;
+        readCounter++;
       }
     })
   }

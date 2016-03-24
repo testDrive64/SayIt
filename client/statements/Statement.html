@@ -8,7 +8,11 @@
 			{{/each}}
 		</p>
 		<a href="/statement/{{_id}}">View Details</a>
-		<button class="btn-primary toggle-menu">Add To Favorites</button>
-		<button class="btn-deny toggle-menu">Remove From Favorites</button>
+		{{#if favorites}}
+			<button class="btn-deny toggle-menu">Remove From Favorites</button>
+		{{else}}
+			<button class="btn-primary toggle-menu">Add To Favorites</button>
+		{{/if}}
+		{{> quickForm collection="Statements" id=updateStatementId type="update" doc=this}}
 	</article>
 </template>

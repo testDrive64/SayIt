@@ -1,9 +1,15 @@
 <template name="Favorites">
-
   <h1 class="page-title">My Favorites</h1>
   {{#each statements}}
+    {{> FavoritesItem}}
+  {{else}}
+    <h3>Please add some <a href="/statement-list">favorite book</a>, that you like</h3>
+  {{/each}}
+</template>
+
+<template name="FavoritesItem">
+  <div class="favorites-item">
     <h3>{{name}}</h3>
     <p>{{desc}}</p>
-  {{/each}}
-
+  </div>
 </template>

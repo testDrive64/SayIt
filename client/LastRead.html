@@ -1,0 +1,14 @@
+<template name="LastRead">
+  <h1 class="page-title">Your last read chapters</h1>
+  <ul class="read-statement">
+      {{#each lastRead}}
+        {{#each chapter}}
+          <li>{{name}} - <span class="header"></span>{{header}}</li>
+        {{/each}}
+      {{else}}
+        <li>
+          <h3>Please add <a href="/statement-list">statements</a>to your favorites</h3>
+        </li>
+      {{/each}}
+  </ul>
+</template>
