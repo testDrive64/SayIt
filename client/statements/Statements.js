@@ -1,4 +1,4 @@
-//Meteor.subscribe('statements');
+Meteor.subscribe('statements');
 
 Template.Statements.onCreated(function() {
 	var self = this;
