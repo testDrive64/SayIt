@@ -5,6 +5,9 @@ Statements.allow({
     return !!userId; // who is allow to writing a statements
                       // change these at any time to if somebody is not sign in then he is named anonymous
                       // but she or he can write what he want
+  },
+  update: function(userId, doc) {
+    return !!userId;
   }
 });
 
@@ -31,12 +34,19 @@ StatementSchema = new SimpleSchema({
   chapter: {
     type: [Chapter]
   },
+  favorites: {
+    type: Boolean,
+    defaultValue: false,
+    optional: true,
+    autoform: {
+      type:"hidden"
+    }
+
+  },
 /*
   readCounter: {
     type: Number,
-    autoValue: function() {
-      return readCounter++;
-    },
+    defaultValue: 0,
     autoform: {
       type:"hidden"
     }
@@ -48,6 +58,7 @@ StatementSchema = new SimpleSchema({
     autoValue: function() {
       return this.userId
     },
+    
     autoform: {
       type: "hidden"
     }
@@ -65,4 +76,25 @@ StatementSchema = new SimpleSchema({
   }
 });
 
+Meteor.methods({
+  toggleFavoritesItem: function(id, currentState) {
+    Statements.update(id, {
+      $set: {
+        favorites: !currentState
+      }
+    });
+  }
+});
+
+/*
+Meteor.methods({
+  clickCounter: function(id, currentState) {
+    Statements.update(id, {
+      $set: {
+        readCounter.value += 1;
+      }
+    })
+  }
+});
+*/
 Statements.attachSchema( StatementSchema );
