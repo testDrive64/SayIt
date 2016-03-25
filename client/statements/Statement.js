@@ -9,7 +9,7 @@ Template.Statement.events({
     Meteor.call('toggleFavoritesItem', this._id, this.favorites);
   },
   'click .fa-trash': function() {
-    Meteor.call('deleteRecipe');
+    Meteor.call('deleteStatement', this._id);
   },
   'click .fa-pencil': function() {
     Session.set('editMode', !Session.get('editMode'));

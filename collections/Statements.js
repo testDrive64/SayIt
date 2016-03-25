@@ -83,8 +83,8 @@ Meteor.methods({
       }
     });
   },
-  deleteRecipe: function() {
-    
+  deleteStatement: function(id) {
+    Statements.remove(id);
   }
 });
 
