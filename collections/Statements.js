@@ -82,6 +82,9 @@ Meteor.methods({
         favorites: !currentState
       }
     });
+  },
+  deleteRecipe: function() {
+    
   }
 });
 
