@@ -1,6 +1,16 @@
 <template name="Statements">
-  {{> NewStatement}}
+<!--
+  {{#if $Session.get 'newStatement'}}
+    {{> NewStatement}}
 
+
+
+-->
+  {{#if $Session.get 'newStatement'}}
+    {{> NewStatement}}
+  {{else}}
+    <button class="new-statement">New Book</button>
+  {{/if}}
   <section class="statements">
     {{#if Template.subscriptionsReady}}
   		{{#each statements}}

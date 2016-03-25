@@ -10,3 +10,9 @@ Template.Statements.helpers({
 		return Statements.find({})
 	}
 });
+
+Template.Statements.events({
+	'click .new-statement': function() {
+		Session.set('newStatement', true);
+	}
+});

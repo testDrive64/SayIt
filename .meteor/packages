@@ -21,6 +21,8 @@ ejson
 spacebars
 check
 
+reactive-var
+
 # Packages from the tutorial 'Intermediate Meteor Tutorial' on Youtube
 
 kadira:flow-router

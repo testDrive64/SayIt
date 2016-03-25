@@ -1,7 +1,7 @@
 <template name="Statement">
 	<article class="statement {{#if favorites}}in-favorites{{/if}}">
 		<h3>{{name}}</h3>
-		{{#if $.Session.get 'editMode'}}
+		{{#if editMode }}
 			{{> quickForm collection="Statements" id=updateStatementId type="update" doc=this autosave=true}}
 		{{else}}
 			<p>{{desc}}</p>
