@@ -1,5 +1,5 @@
 <template name="Statements">
-  {{#if $Session.get 'newStatement' }}
+  {{#if $.Session.get 'newStatement' }}
     {{> NewStatement}}
   {{else}}
     <button class="new-statement">New Book</button>
