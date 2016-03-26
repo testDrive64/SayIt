@@ -31,6 +31,16 @@ StatementSchema = new SimpleSchema({
     label: "Description"
   },
 
+  open: {
+    type: Boolean,
+    defaultValue: false,
+    optional: true,
+    label: "Publish Book"
+    autofrom: {
+      rows: 10
+    }
+  },
+
   chapter: {
     type: [Chapter]
   },

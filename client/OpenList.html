@@ -1,0 +1,12 @@
+<template name="OpenList">
+  <section class="statements">
+    {{#if Template.subscriptionsReady}}
+      {{#each statements}}
+        {{> Statement}}
+      {{/each}}
+    {{else}}
+      <p>No open books</p>
+    {{/if}}
+  </section>
+  {{statement}}
+</template>
