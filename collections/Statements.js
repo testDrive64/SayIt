@@ -35,10 +35,8 @@ StatementSchema = new SimpleSchema({
     type: Boolean,
     defaultValue: false,
     optional: true,
-    label: "Publish Book"
-    autofrom: {
-      rows: 10
-    }
+    label: "Publish Book",
+    
   },
 
   chapter: {
