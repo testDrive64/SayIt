@@ -20,5 +20,9 @@ Template.Statement.events({
   },
   'click .fa-pencil': function(event, template) {
     template.editMode.set(!template.editMode.get());      // Idee um meine schon gelesen seite einzufügen!!!
+  },
+
+  'click .fa-publish': function(event, template) {
+    
   }
 });
