@@ -31,17 +31,10 @@ StatementSchema = new SimpleSchema({
     label: "Description"
   },
 
-  open: {
-    type: Boolean,
-    defaultValue: false,
-    optional: true,
-    label: "Publish Book",
-    
-  },
-
   chapter: {
     type: [Chapter]
   },
+
   favorites: {
     type: Boolean,
     defaultValue: false,
@@ -60,6 +53,14 @@ StatementSchema = new SimpleSchema({
     }
   },
 */
+
+  open: {
+    type: Boolean,
+    defaultValue: false,
+    optional: true,
+    label: "Publish Book",
+  },
+
   author:{
     type: String,
     label: "Author",
